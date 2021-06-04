@@ -1,0 +1,16 @@
+.app-header {
+    display: flex;
+    justify-content: center;
+}
+
+
+.app-header h2 {
+    font-size: 1rem;
+    position: absolute;
+    border-bottom: .1px solid rgba(255, 255, 255, 0.493);
+    padding: 2px;
+    top: 2px;
+    right: 1px;
+    color: rgb(255, 253, 253);
+}
+

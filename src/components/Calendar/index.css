@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+.calendar header {
+    display: flex;
+    justify-content: center;
+    top: 20px;
+    position: absolute;
+}
+
+.calendar header button,
+.calendar header select {
+    margin: 0 2px;
+    border: none;
+    outline: none;
+    left: 320px;
+    top: 10px;
+    position: relative;
+    width: 70px;
+}
+
+.calendar header select {
+    color: rgb(0, 0, 0);
+    background: rgb(255, 241, 241);
+    font-weight: 600;
+    border-radius: 2px;
+    letter-spacing: 1px;
+}
+
+.calendar header button {
+    border: 2px solid #fff;
+    padding: 0px 10px;
+    background: none;
+    font-size: 20px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+
+.calendar table {
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    width: 250px;
+    height: 250px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(25px);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.calendar th {
+    vertical-align: middle;
+    text-align: center;
+    height: 36px;
+    box-shadow: 2px 0 10px #0a0a0a;
+    padding: 2px 2px;
+    color: rgb(255, 255, 255);
+}
+
+.calendar .day {
+    margin: 30px;
+    text-align: center;
+    border-radius: 5px;
+    color: seashell;
+    transition: .1s linear;
+}
+
+.calendar .day:hover {
+    background-color: rgba(0, 0, 0, 0.144);
+    color: #000;
+    cursor: pointer;
+}
+
+.calendar .day.selected {
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.calendar .day.today {
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.calendar .day.today:hover {
+    background-color: #b4b0b0;
+}
+

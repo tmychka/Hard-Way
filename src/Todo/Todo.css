@@ -1,0 +1,21 @@
+ .todo-app {
+  padding: 50px;
+  position: absolute;
+  background: rgba(5, 5, 5, 0.87);
+  backdrop-filter: blur(25px);
+  height: 100%;
+  min-width: 510px;
+}
+
+.app-todo {
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+  
+.top-panel {
+    margin: 3rem 0;
+}
+  

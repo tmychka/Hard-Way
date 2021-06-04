@@ -1,0 +1,22 @@
+.bottom-panel {
+    margin-top: 20px;
+    position: absolute;
+    right: 70px;
+  }
+  
+  .bottom-panel .new-todo-label {
+    padding-right: 190px;
+    padding-left: 20px;
+    background: rgb(254, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 50px;
+    width: 360px;
+  }
+
+  .bottom-panel .new-todo-label:focus {
+    background: rgb(255, 255, 255);
+    box-shadow: none;
+    color: rgb(0, 0, 0);
+  }
+  

@@ -1,0 +1,9 @@
+.todo-list .list-group-item {
+    padding: 2px 20px;
+    top: 30px;
+    margin: 2px;
+    width: 400px;
+    list-style: none;
+    background: none;
+    color: rgb(255, 255, 255);
+}
