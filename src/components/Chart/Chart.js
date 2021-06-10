@@ -6,7 +6,7 @@ import '../About/About.css'
 // Ref : https://developers.google.com/chart/interactive/docs/gallery/candlestickchart#Waterfall
 const data = [
       ["Jun", "", "", "", ""],
-      ["1week", 5, 5, 5, 5],
+      ["1week", 50, 50, 50, 50],
       ["2week", '', '', '', ''],
       ["3week", '', '', '', ''],
       ["4week", '', '', '', ''],
