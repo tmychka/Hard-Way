@@ -1,0 +1,99 @@
+.boards-app {
+    background: rgb(255, 255, 255);
+    height: 270vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.boards-btn {
+    position: relative;
+    right: 30px;
+}
+
+.boards-home {
+    left: 0;
+    margin: 10px;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 2px rgb(0, 0, 0);
+    transition: all 1s ease;
+}
+
+.boards-home:hover {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 100px rgb(0, 204, 255);
+}
+
+.boards-home i {
+    cursor: pointer;
+}
+
+.boards-nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    top: 0px;
+    align-items: center;
+    position: absolute;
+}
+
+.boards-box {
+    background: url(https://image.freepik.com/free-photo/black-textured-brick-wall-background_53876-63583.jpg);
+    width: 1280px;
+    min-height: 700px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 60px;
+    flex-wrap: wrap;
+}
+
+.boards-box p {
+    color: crimson;
+}
+
+.board {
+    margin: 20px;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 0 10px rgb(0, 0, 0),
+                0 0 20px #000,
+                0 0 30px #000,
+                0 0 40px #000;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.board:hover {
+    box-shadow: 0 0 100px rgb(255, 249, 249);
+    border: 1px solid rgb(255, 255, 255);
+    transform: scale(1.10);
+}
+
+.board-title {
+    flex-wrap: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 131px;
+    padding-top: 7px;
+    background: rgb(37, 37, 37);
+    color: cornsilk;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.board-title h1 {
+    font-size: 25px; 
+}
+
+.board-title span {
+    color: #000;
+}
+

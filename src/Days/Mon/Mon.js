@@ -1,5 +1,5 @@
 import React from 'react';
-import Calendar from '../../components/Calendar';
+
 import Todo from '../../Todo/Todo'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import App from '../../App';
@@ -12,9 +12,8 @@ function Day() {
       <Router>
        <div>
           <div className='Day'>
-             <a className='home' href='/'><i className='fas fa-home'></i></a>
+             <a className='home' href='/'><i class="fas fa-home"></i></a>
              <div className="Day_conteiner">
-                  <Calendar />
                   <Todo /> 
              </div>
           </div>

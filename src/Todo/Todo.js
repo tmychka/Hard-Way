@@ -5,7 +5,7 @@ import AppHeader from './AppHeader';
 import ItemStatusFilter from './ItemStatusFilter';
 import ItemAddForm from './ItemAddForm';
 import  Batery from '../components/Batery/Batery'
-
+import Calendar from '../components/Calendar';
 import './Todo.css'
 
 
@@ -17,14 +17,13 @@ export default class Todo extends Component {
       items: [
         { id: 1, label: 'Побігать кругі', important: false, done: false },
         { id: 2, label: 'Почитать телеграм', important: false, done: false },
-        { id: 3, label: 'React вчить', important: false, done: false },
+        { id: 3, label: 'React', important: false, done: false },
         { id: 4, label: 'Повірстать', important: false, done: false },
-        { id: 5, label: 'Повчить стілі', important: false, done: false },
-        { id: 6, label: 'Повчить методи js', important: false, done: false },
-        { id: 7, label: 'Сodwars', important: false, done: false },
-        { id: 8, label: 'Англійська', important: false, done: false },
-        { id: 9, label: 'Попічатать', important: false, done: false },
-        { id: 10, label:'Почитать Літературу', important: false, done: false }
+        { id: 5, label: 'Сodwars', important: false, done: false },
+        { id: 6, label: 'Learn Js', important: false, done: false },
+        { id: 7, label: 'Англійська', important: false, done: false },
+        { id: 8, label: 'Попічатать', important: false, done: false },
+        { id: 9, label: 'Sport', important: false, done: false }
       ],
       filter: 'all',
       search: ''
@@ -144,6 +143,7 @@ export default class Todo extends Component {
                
             <div className='d-flex batery'>
               <Batery value={this.progress} />
+              <Calendar />
             </div>
           </div>
         </div>

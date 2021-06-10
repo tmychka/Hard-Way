@@ -153,3 +153,16 @@ nav .conteiner .list {
   transform: scale(1.05);
 }
 
+.boards-name {
+  text-decoration: none;
+  color: cornsilk;
+}
+
+.boards-name:hover {
+  color: rgb(255, 255, 255);
+}
+
+.boards {
+  position: relative;
+  right: 3px
+}
