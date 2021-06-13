@@ -20,7 +20,7 @@ nav .conteiner {
   display: flex;
   align-items: center;
 }
-	
+
 nav .conteiner .list {
   display: flex;
   margin: 0 auto;
@@ -28,7 +28,7 @@ nav .conteiner .list {
   right: 180px;
 }
 
-.conteiner .name a {
+.conteiner .name span {
   color: rgb(161, 161, 161);
   text-shadow: 3px -1px 2px #fff,
                7px -5px 3px rgb(53, 53, 53),
@@ -83,7 +83,7 @@ nav .conteiner .list {
   top: 10%;
   border-bottom-left-radius: 90%;
   border-top-right-radius: 90%;
-  background: rgb(19, 19, 19); 
+  background: rgb(19, 19, 19);
 }
 
 .App2 .conteiner {
