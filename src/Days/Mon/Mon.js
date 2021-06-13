@@ -12,7 +12,7 @@ function Day() {
       <Router>
        <div>
           <div className='Day'>
-             <a className='home' href='/'><i class="fas fa-home"></i></a>
+             <a className='home' href='/'><i className="fas fa-home"></i></a>
              <div className="Day_conteiner">
                   <Todo /> 
              </div>
