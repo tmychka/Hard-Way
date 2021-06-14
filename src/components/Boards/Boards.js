@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import App from '../../App'
 import {getBoards, removeBoard} from '../../api/boards'
 import CreateBoardModal from './CreateBoardModal'
+import { format, set } from 'date-fns'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './Boards.css'
 
@@ -16,43 +17,40 @@ const Boards = () => {
            setBoards(res.data.data)});
      }, [])
 
-    const addBoard = () => {
-      console.log('Click on add Board')
-    }
   
     const remove = (id) => {
        removeBoard(id).then(() => {   
            setBoards((prevBoards) => prevBoards.filter(board => board.id !== id))
-       }) 
-    }
-  
+      }) 
+  }
+
+  const Open = () => {
+     const [open, setOpen] = useState(false)
+  }
+
+     
     return (
       <>
        <div className='boards-app'>
            <nav className='boards-nav'>
                <a className='boards-home' href='/'><i className="fas fa-home"></i></a>
                <h1>Boards</h1>
-               <button
-                   type="button"
-                   className="btn btn-info  boards-btn"
-                   onClick={() => addBoard()}>
-                   BOARDS + 
-               </button>
+           
            </nav>
            {boards.map(board => (
                   <div key={board.id} className='boards-box'>
                      <div  className='board'>
-                       <button className='btn btn-outline-danger remove' onClick={() => remove(board.id)}><i className='fas fas-danger'></i></button>
+                       <button className='btn btn-outline-danger remove' onClick={() => remove(board.id)}><i className="fas fa-trash" ></i></button>
                         <div className='board-title'>
                            <h1>{board.attributes.title}</h1>
-                           <span>{board.attributes.date}</span>
+                           <span>{format(new Date(board.attributes.date), 'MM.dd.yyyy')}</span>
                         </div>
                      </div>
-                   </div>
+                  </div>
             ))}
             
-        </div>
-                        <CreateBoardModal />
+      </div>
+                        <CreateBoardModal open={Open} />
      </>
     )
 }

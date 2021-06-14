@@ -1,10 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react'
+import classNames from 'classnames'
+
 import './Boards.css'
 
-function CreateBoardModal () {
+
+function CreateBoardModal ({ open }) {
+  
+
+
+
+
+    let x = 'modal modal-board fade'
+
+   if(!open) {
+       x += ' show'
+   }
+
+
    return (
+
+
        <>
-          <div className="modal modal-board fade show">
+       
+          <div className={x}>
               <div className="modal-dialog">
                  <div className="modal-content active">
                      <div className="modal-header">
