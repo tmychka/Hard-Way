@@ -4,24 +4,23 @@ import './Boards.css'
 function CreateBoardModal () {
    return (
        <>
-
-<div class="modal modal-board fade show" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">  
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
-    </div>
-  </div>
-</div>
+          <div className="modal modal-board fade show">
+              <div className="modal-dialog">
+                 <div className="modal-content active">
+                     <div className="modal-header">
+                         <h5 className="modal-title">Create Board</h5>
+                     </div>
+                     <div className="modal-body d-flex">  
+                        <input type='date' className='create__date' />
+                        <input type='text' className='create__input' placeholder='...create' />
+                     </div>
+                     <div className="modal-footer active">
+                        <button type="button" className="btn btn-warning"><i className="fas fa-times"></i></button>
+                        <button type="button" className="btn btn-dark"><i className="fas fa-check"></i></button>
+                     </div>
+                  </div>
+               </div>
+           </div>
        </>
    )
 }

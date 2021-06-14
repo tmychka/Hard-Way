@@ -13,20 +13,19 @@ const Boards = () => {
 
     useEffect(() => {
         getBoards().then((res) => { 
-          setBoards(res.data.data)});
+           setBoards(res.data.data)});
      }, [])
 
-     const addBoard = () => {
+    const addBoard = () => {
       console.log('Click on add Board')
-  }
+    }
   
-     const remove = (id) => {
-      removeBoard(id).then(() => {   
-         setBoards((prevBoards) => prevBoards.filter(board => board.id !== id))
-      })
-  }
+    const remove = (id) => {
+       removeBoard(id).then(() => {   
+           setBoards((prevBoards) => prevBoards.filter(board => board.id !== id))
+       }) 
+    }
   
-     
     return (
       <>
        <div className='boards-app'>
@@ -49,10 +48,10 @@ const Boards = () => {
                            <span>{board.attributes.date}</span>
                         </div>
                      </div>
-                  </div>
+                   </div>
             ))}
             
-      </div>
+        </div>
                         <CreateBoardModal />
      </>
     )

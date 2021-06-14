@@ -94,7 +94,43 @@
     top: 5px;
 }
 
+.modal-content.active {
+    background: rgb(255, 255, 255);
+}
+
+.modal-footer.active {
+    border-top: none;
+}
+
 .modal.modal-board {
-    display: block;
-    background:rgb(0, 0, 0, 0.5)
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0, 0, 0, .75);
+}
+
+.create__input {
+  border: none;
+  background: rgba(219, 219, 219, 0.678);
+  box-shadow: none;
+  border-radius: 2px;
+  padding: 4px;
+  padding-left: 10px;
+  margin-left: 28px;
+  text-align: left;
+  width: 270px;
+  color: rgb(0, 0, 0);
+}
+
+.create__date {
+  background: rgba(219, 219, 219, 0.678);
+  color: rgb(0, 0, 0);
+  padding-left: 10px;
+  border-radius: 2px;   
+  border: none;
+}
+
+.create__input:focus-visible,
+.create__date:focus-visible {
+    outline: none;
 }
