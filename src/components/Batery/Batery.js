@@ -1,5 +1,6 @@
-import React from 'react'
-import './Batery.css'
+import React from 'react';
+
+import './Batery.css';
 
 function Batery ( { value } )  {
 

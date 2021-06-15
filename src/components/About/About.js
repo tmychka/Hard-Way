@@ -1,6 +1,7 @@
-import React from 'react'
-import ExampleChart from '../Chart/Chart'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route,} from 'react-router-dom';
+
+import ExampleChart from '../Chart/Chart';
 import App from '../../App'
 
 import './About.css'

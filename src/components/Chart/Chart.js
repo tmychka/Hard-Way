@@ -1,13 +1,13 @@
 import React from "react";
 import Chart from "react-google-charts";
 
-import '../About/About.css'
+import '../About/About.css';
 
 // Ref : https://developers.google.com/chart/interactive/docs/gallery/candlestickchart#Waterfall
 const data = [
       ["Jun", "", "", "", ""],
       ["1week", 50, 50, 50, 50],
-      ["2week", '', '', '', ''],
+      ["2week", 40, 40, 40, 40],
       ["3week", '', '', '', ''],
       ["4week", '', '', '', ''],
 ];

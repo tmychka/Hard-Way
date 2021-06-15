@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import App from '../../App'
-import {getBoards, removeBoard} from '../../api/boards'
-import CreateBoardModal from './CreateBoardModal'
-import { format, set } from 'date-fns'
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import './Boards.css'
+import { format } from 'date-fns';
+
+import App from '../../App';
+import {getBoards, removeBoard} from '../../api/boards';
+import CreateBoardModal from './CreateBoardModal';
+import './Boards.css';
 
 
 
@@ -23,23 +24,17 @@ const Boards = () => {
            setBoards((prevBoards) => prevBoards.filter(board => board.id !== id))
       }) 
   }
-
-  const Open = () => {
-     const [open, setOpen] = useState(false)
-  }
-
      
     return (
       <>
        <div className='boards-app'>
            <nav className='boards-nav'>
                <a className='boards-home' href='/'><i className="fas fa-home"></i></a>
-               <h1>Boards</h1>
-           
+               <CreateBoardModal />
            </nav>
            {boards.map(board => (
                   <div key={board.id} className='boards-box'>
-                     <div  className='board'>
+                     <div className='board'>
                        <button className='btn btn-outline-danger remove' onClick={() => remove(board.id)}><i className="fas fa-trash" ></i></button>
                         <div className='board-title'>
                            <h1>{board.attributes.title}</h1>
@@ -50,7 +45,7 @@ const Boards = () => {
             ))}
             
       </div>
-                        <CreateBoardModal open={Open} />
+                       
      </>
     )
 }
