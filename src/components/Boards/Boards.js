@@ -8,8 +8,6 @@ import CreateBoardModal from './CreateBoardModal';
 import './Boards.css';
 
 
-
-
 const Boards = () => {
     const [boards, setBoards] = useState([])
 
@@ -24,13 +22,21 @@ const Boards = () => {
            setBoards((prevBoards) => prevBoards.filter(board => board.id !== id))
       }) 
   }
+
+    const [open, setOpen] = useState(false)
+  
      
     return (
       <>
        <div className='boards-app'>
            <nav className='boards-nav'>
                <a className='boards-home' href='/'><i className="fas fa-home"></i></a>
-               <CreateBoardModal />
+               <button
+                  type="button"
+                  className="btn btn-warning  boards-btn"
+                  onClick={() => setOpen(true)}>
+                    + 
+               </button>
            </nav>
            {boards.map(board => (
                   <div key={board.id} className='boards-box'>
@@ -43,6 +49,7 @@ const Boards = () => {
                      </div>
                   </div>
             ))}
+                <CreateBoardModal open={open} close={setOpen} />
             
       </div>
                        

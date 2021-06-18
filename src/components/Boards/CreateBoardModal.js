@@ -1,27 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import './Boards.css';
 
 
-function CreateBoardModal () {
-  
-    let x = 'modal-board fade modal'
-    const [open, setOpen] = useState(false)
-        
-    if(open) {
-        x += ' show modals'
-    }
-    
+function CreateBoardModal ({ open, close }) {
+   
    return (
-         <>
-          <button
-             type="button"
-             className="btn btn-warning  boards-btn"
-             onClick={() => setOpen(true)}>
-                + 
-          </button>
+      <>
      
-          <div className={x}>
+         { open && <div className='modal-board fade modal show modals'>
               <div className="modal-dialog">
                  <div className="modal-content active">
                      <div className="modal-header">
@@ -33,7 +20,7 @@ function CreateBoardModal () {
                      </div>
                      <div className="modal-footer active">
                         <button type="button"
-                                onClick={() => setOpen(false)}
+                                onClick={() => close(false)}
                                 className="btn btn-warning">
                                 <i className="fas fa-times"></i>
                         </button>
@@ -41,7 +28,7 @@ function CreateBoardModal () {
                      </div>
                   </div>
                </div>
-           </div>
+           </div>}
          </>
    )
 }
