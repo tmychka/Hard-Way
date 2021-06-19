@@ -3,9 +3,9 @@ import { Switch, Route } from 'react-router-dom';
 
 import Mon from './Days/Mon';
 import About from './components/About';
-import Boards from './components/Boards'; 
+import Boards from './pages/Boards'; 
 import Navibar from './components/Navibar';
-import Dashboard from './components/Dashboard'; 
+import Dashboard from './pages/Dashboard'; 
 
 import './App.css';
 

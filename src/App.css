@@ -64,15 +64,12 @@ nav .conteiner .list {
   font-family: 'Poppins' sans-serif;
 }
 
-.App2 {
-  position: absolute;
-  top: 70px;
-  width: 100%;
-  height: 89%;
+.dashboard {
+  height: 100%;
   background: linear-gradient(rgb(61, 61, 61), #000);
 }
 
-.App2::before {
+.dashboard::before {
   content: '';
   width: 1000px;
   background: rgba(0, 0, 0, 0.13);
@@ -86,13 +83,12 @@ nav .conteiner .list {
   background: rgb(19, 19, 19);
 }
 
-.App2 .conteiner {
+.dashboard .conteiner {
    display: flex;
    justify-content: center;
    align-items: center;
    width: 500px;
    height: 350px;
-   margin-top: 50px;
 }
 
 .conteiner h1 {
