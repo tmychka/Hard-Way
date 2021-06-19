@@ -121,11 +121,3 @@
 .box5 {
     left: 100px;
 }
-
-.chart {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 180px;
-}

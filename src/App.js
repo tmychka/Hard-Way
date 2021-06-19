@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Mon from './Days/Mon';
-import About from './components/About';
+import About from './pages/About';
 import Boards from './pages/Boards'; 
 import Navibar from './components/Navibar';
 import Dashboard from './pages/Dashboard'; 

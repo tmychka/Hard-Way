@@ -1,9 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 
-import * as calendar from './Calendar';
+import * as calendar from './utils';
 
-import './index.css';
+import './Calendar.css';
 
 export default class Calendar extends React.Component {
     static defaultProps = {

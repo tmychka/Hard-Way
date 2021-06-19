@@ -25,7 +25,7 @@ const Dashboard = () => {
             </div>
             <div className='box'>
                 <Link to={redirectPath}>
-                    <img src={imgUrl} />
+                    <img src={imgUrl} alt="Box" />
                 </Link>
             </div>
         </div>
