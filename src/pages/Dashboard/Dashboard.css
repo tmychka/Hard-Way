@@ -1,0 +1,13 @@
+.dashboard {
+    height: 100%;
+    background: rgb(15, 15, 15);
+  }
+  
+  .dashboard .conteiner {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     width: 500px;
+     height: 350px;
+  }

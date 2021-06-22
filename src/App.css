@@ -3,7 +3,7 @@
 
 .App {
   width: 100%;
-  background: linear-gradient(rgb(71, 71, 71), rgb(54, 54, 54));
+  background: url(https://img.freepik.com/free-vector/brick-wall-background_275806-1107.jpg?size=338&ext=jpg);
 }
 
 .App nav {
@@ -64,89 +64,43 @@ nav .conteiner .list {
   font-family: 'Poppins' sans-serif;
 }
 
-.dashboard {
-  height: 100%;
-  background: linear-gradient(rgb(61, 61, 61), #000);
-}
-
-.dashboard::before {
-  content: '';
-  width: 1000px;
-  background: rgba(0, 0, 0, 0.13);
-  border: 2px solid rgba(0, 0, 0, 0.425);
-  position: absolute;
-  height: 500px;
-  left: 0%;
-  top: 10%;
-  border-bottom-left-radius: 90%;
-  border-top-right-radius: 90%;
-  background: rgb(19, 19, 19);
-}
-
-.dashboard .conteiner {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 500px;
-   height: 350px;
-}
-
 .conteiner h1 {
   color: rgb(255, 255, 255);
   padding: 40px 20px 40px;
   left: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   position: relative;
   font-family: 'Poppins', sans-serif;
   border-radius: 20px;
   font-weight: 500;
   font-size: 50px;
-  text-shadow: 0 0 5px #000;
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+  border: 2px solid rgb(23, 24, 24);
+  box-shadow: 5px 10px 5px rgb(0, 0, 0, 0.5);
 }
 
 .box {
-  position: relative;
-  bottom: 240px;
-  left: 230px;
-  margin: 0 auto;
+  padding: 0;
+  right: 100px;
+  bottom: 5px;
+  
+  position: absolute;
   color: #fff;
-  width: 500px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
   transform-style: preserve-3d;
 }
 
 .box a img {
-  border-radius: 2px;
-  width: 450px;
-  height: 300px;
-  transition: all 1s ease;
-  border-left: 5px solid rgb(255, 0, 76);
+  border-radius: 10px;
+  width: 350px;
+  height: 250px;
+  transition: all .5s ease-in;
 }
-
-.box::before {
-  content: 'BOX';
-  font-size: 40px;
-  font-weight: 700;
-  color: rgb(255, 255, 255);
-  background: rgb(255, 0, 64);
-  padding: 0 20px;
-  position: absolute;
-  top: 67%;
-  left: 165px;
-  z-index: 10000;
-  border-radius: 5px;
-  transition: all .4s ease;
-}
-
-.box:hover::before {
-  background: none;
-  border: 5px solid rgb(255, 0, 64);
-  color: #000;
-}
-
 
 .box a img:hover {
-  transform: scale(1.05);
+  box-shadow: 0 0 20px #000;
+  transform: translateX(-70px);
 }
 
 .boards-name {

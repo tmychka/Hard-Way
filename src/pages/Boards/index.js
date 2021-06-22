@@ -33,7 +33,6 @@ const Boards = () => {
       <>
         <div className='boards-app'>
             <nav className='boards-nav'>
-                <a className='boards-home' href='/'><i className="fas fa-home"></i></a>
                 <button
                     type="button"
                     className="btn btn-warning boards-btn"

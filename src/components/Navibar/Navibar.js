@@ -2,12 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navibar = () => {
+   
+    const logoNavibar = 'https://icons.iconarchive.com/icons/arrioch/office-dock/128/Whack-MS-Access-icon.png'
+
     return (
           <div className="App">
             <nav>
               <div className='conteiner'>
                  <div className='logo'>
-                    <img src='https://icons.iconarchive.com/icons/arrioch/office-dock/128/Whack-MS-Access-icon.png' alt="Logo" width='50%' height='50%' />
+                    <Link to='/'>
+                        <img src={logoNavibar} alt="Logo" width='50%' height='50%' />
+                    </Link>
                  </div>
                  <div className='name'>
                     <span>Hard way</span>

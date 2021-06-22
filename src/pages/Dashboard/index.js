@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getActiveBoards } from '../../api/boards';
 
+import './Dashboard.css'
+
 const imgUrl = 'https://images.unsplash.com/photo-1606166325695-ce4d64e3195f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fHByb2dyYW1tZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60';
 
 const Dashboard = () => {
