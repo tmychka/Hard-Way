@@ -2,7 +2,7 @@ import React from 'react';
 
 import './TodoListItem.css';
 
-const TodoListItem = ( {important, done, label, onToggleImportant, onToggleDone, onDelete} ) => {
+const TodoListItem = ( {important, done, attributes: {title}, onToggleImportant, onToggleDone, onDelete} ) => {
   
     let classNames = 'todo-list-item';
   
@@ -18,7 +18,7 @@ const TodoListItem = ( {important, done, label, onToggleImportant, onToggleDone,
       <span className={classNames}>
          <span
              className="todo-list-item-label"
-             onClick={onToggleDone}>{label}
+             onClick={onToggleDone}>{title}
         </span>
         <button type="button"
                 className="btn btn-outline-warning btn-sm float-right"

@@ -10,37 +10,30 @@ import './Todo.css'
 
 
 export default class Todo extends Component {
-
-    maxId = 100;
   
     state = {
-      items: [
-        { id: 1, label: 'Побігать кругі', important: false, done: false },
-        { id: 2, label: 'Почитать телеграм', important: false, done: false },
-        { id: 3, label: 'React', important: false, done: false },
-        { id: 4, label: 'Повірстать', important: false, done: false },
-        { id: 5, label: 'Сodwars', important: false, done: false },
-        { id: 6, label: 'Learn Js', important: false, done: false },
-        { id: 7, label: 'Англійська', important: false, done: false },
-        { id: 8, label: 'Попічатать', important: false, done: false },
-        { id: 9, label: 'Sport', important: false, done: false }
-      ],
       filter: 'all',
       search: ''
     };
 
     get progress() {
-       const itemsDone = this.state.items.filter((item) => item.done === true)
-       return Math.round((itemsDone.length * 100) / this.state.items.length) + '%'
+       const itemsDone = this.props.items.filter((item) => item.done === true)
+       return Math.round((itemsDone.length * 100) / this.props.items.length) + '%'
     }
 
 
     onItemAdded = (label) => {
-      this.setState((state) => {
-        const item = this.createItem(label);
-        return { items: [...state.items, item] };
-      })
+       this.props.onCreateItem(label);
     };
+
+    createItem(label) {
+      return {
+        id: ++this.maxId,
+        label,
+        important: false,
+        done: false
+      };
+    }
   
     toggleProperty = (arr, id, propName) => {
       const idx = arr.findIndex((item) => item.id === id);
@@ -87,16 +80,7 @@ export default class Todo extends Component {
     onSearchChange = (search) => {
       this.setState({ search });
     };
-    onChange
-    createItem(label) {
-      return {
-        id: ++this.maxId,
-        label,
-        important: false,
-        done: false
-      };
-    }
-  
+    
     filterItems(items, filter) {
       if (filter === 'all') {
         return items;
@@ -118,7 +102,8 @@ export default class Todo extends Component {
     }
   
     render() {
-      const { items, filter, search } = this.state;
+      const { items } = this.props;
+      const { filter, search } = this.state;
       const doneCount = items.filter((item) => item.done).length;
       const toDoCount = items.length - doneCount;
       const visibleItems = this.searchItems(this.filterItems(items, filter), search);

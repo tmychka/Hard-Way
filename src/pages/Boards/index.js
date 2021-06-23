@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { format } from 'date-fns';
+import { Link } from 'react-router-dom';
 
 import {getBoards, removeBoard} from '../../api/boards';
 import CreateBoardModal from './components/CreateBoardModal';
@@ -52,7 +53,7 @@ const Boards = () => {
                                 <i className="fas fa-trash" />
                             </button>
                             <div className='board-title'>
-                               <h1>{board.attributes.title}</h1>
+                               <h1><Link to={`/boards/${board.id}`}>{board.attributes.title}</Link></h1>
                                <span>{format(new Date(board.attributes.date), 'MM.dd.yyyy')}</span>
                             </div>
                         </div>
