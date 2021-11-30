@@ -2,13 +2,9 @@ import React from 'react';
 
 import './TodoListItem.css';
 
-const TodoListItem = ( {important, done, attributes: {title}, onToggleImportant, onToggleDone, onDelete} ) => {
+const TodoListItem = ( { attributes: {title, done}, onToggleDone, onDelete} ) => {
   
     let classNames = 'todo-list-item';
-  
-     if (important) {
-         classNames += ' important';
-     }
 
      if (done) {
         classNames += ' done';
@@ -20,12 +16,7 @@ const TodoListItem = ( {important, done, attributes: {title}, onToggleImportant,
              className="todo-list-item-label"
              onClick={onToggleDone}>{title}
         </span>
-        <button type="button"
-                className="btn btn-outline-warning btn-sm float-right"
-                onClick={onToggleImportant}>
-             <i className="fa fa-exclamation" />
-        </button>
-
+        
         <button type="button"
                 className="btn btn-outline-danger btn-sm float-right"
                 onClick={onDelete}>
@@ -35,4 +26,4 @@ const TodoListItem = ( {important, done, attributes: {title}, onToggleImportant,
     )
 };
 
-export default TodoListItem
+export default TodoListItem;

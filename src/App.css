@@ -67,9 +67,7 @@ nav .conteiner .list {
 .conteiner h1 {
   color: rgb(255, 255, 255);
   padding: 40px 20px 40px;
-  left: 30px;
-  margin-bottom: 50px;
-  position: relative;
+  margin: 0 auto;
   font-family: 'Poppins', sans-serif;
   border-radius: 20px;
   font-weight: 500;
@@ -79,29 +77,6 @@ nav .conteiner .list {
   box-shadow: 5px 10px 5px rgb(0, 0, 0, 0.5);
 }
 
-.box {
-  padding: 0;
-  right: 100px;
-  bottom: 5px;
-  
-  position: absolute;
-  color: #fff;
-  width: 400px;
-  height: 300px;
-  transform-style: preserve-3d;
-}
-
-.box a img {
-  border-radius: 10px;
-  width: 350px;
-  height: 250px;
-  transition: all .5s ease-in;
-}
-
-.box a img:hover {
-  box-shadow: 0 0 20px #000;
-  transform: translateX(-70px);
-}
 
 .boards-name {
   text-decoration: none;
@@ -115,4 +90,11 @@ nav .conteiner .list {
 .boards {
   position: relative;
   right: 3px
+}
+
+
+.abouts {
+    height: 270vh;
+    background: #d63007;
+    margin: 0 auto;
 }

@@ -17,23 +17,13 @@ export default class Todo extends Component {
     };
 
     get progress() {
-       const itemsDone = this.props.items.filter((item) => item.done === true)
+       const itemsDone = this.props.items.filter((item) => item.attributes.done === true)
        return Math.round((itemsDone.length * 100) / this.props.items.length) + '%'
     }
-
 
     onItemAdded = (label) => {
        this.props.onCreateItem(label);
     };
-
-    createItem(label) {
-      return {
-        id: ++this.maxId,
-        label,
-        important: false,
-        done: false
-      };
-    }
   
     toggleProperty = (arr, id, propName) => {
       const idx = arr.findIndex((item) => item.id === id);
@@ -48,29 +38,12 @@ export default class Todo extends Component {
       ];
     };
   
-    onToggleDone = (id) => {
-      this.setState((state) => {
-        const items = this.toggleProperty(state.items, id, 'done');
-        return { items };
-      });
+    onToggleDone = (id, done) => {
+       this.props.onUpdateItem(id, done)
     };
-  
-    onToggleImportant = (id) => {
-      this.setState((state) => {
-        const items = this.toggleProperty(state.items, id, 'important');
-        return { items };
-      });
-    };
-  
+
     onDelete = (id) => {
-      this.setState((state) => {
-        const idx = state.items.findIndex((item) => item.id === id);
-        const items = [
-          ...state.items.slice(0, idx),
-          ...state.items.slice(idx + 1)
-        ];
-        return { items };
-      });
+        this.props.onDeleteItem(id)
     };
   
     onFilterChange = (filter) => {
@@ -85,9 +58,9 @@ export default class Todo extends Component {
       if (filter === 'all') {
         return items;
       } else if (filter === 'active') {
-        return items.filter((item) => (!item.done));
+        return items.filter((item) => (!item.attributes.done));
       } else if (filter === 'done') {
-        return items.filter((item) => item.done);
+        return items.filter((item) => item.attributes.done);
       }
     }
   
@@ -122,7 +95,6 @@ export default class Todo extends Component {
             </div>
               <TodoList
                       items={ visibleItems }
-                      onToggleImportant={this.onToggleImportant}
                       onToggleDone={this.onToggleDone}
                       onDelete={this.onDelete} />
                

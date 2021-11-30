@@ -3,7 +3,7 @@
 .calendar header {
     display: flex;
     justify-content: flex-end;
-    top: 5px;
+    top: 60px;
     right: 23px;
     position: absolute;
 }
@@ -41,7 +41,7 @@
     border-collapse: separate;
     border-spacing: 0;
     position: absolute;
-    top: 60px;
+    top: 120px;
     font-size: 15px;
     right: 5px;
     width: 300px;

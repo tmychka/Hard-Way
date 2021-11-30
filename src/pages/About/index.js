@@ -1,23 +1,57 @@
 import React from 'react';
-
-import ExampleChart from '../../components/Chart/Chart';
 import './About.css';
 
 const About = () => {
     return (
-        <div className='wrapper'>
-            <section className='section'>
-                <div className='about_section'>
-                    <div className='sect_box'>    
-                        <div className='box1'>Html       <span>40%</span></div>
-                        <div className='box2'>Css        <span>50%</span></div>
-                        <div className='box3'>Javascript <span>30%</span></div>
-                        <div className='box4'>React      <span>30%</span></div>
-                        <div className='box5'>Python     <span>10%</span></div>
-                    </div>
-                     <ExampleChart />
+        <div className="container">
+            <h2>Css Skills Bar UI Design</h2>
+            <div className="skills">
+                <span className="Name">Html</span>
+                <div className="percent">
+                    <div className="progresses" style={{width: '67%'}}></div>
                 </div>
-            </section>
+                <span className="Value">67%</span>
+            </div>
+
+            <div className="skills">
+                <span className="Name">Css</span>
+                <div className="percent">
+                    <div className="progresses" style={{width: '80%'}}></div>
+                </div>
+                <span className="Value">80%</span>
+            </div>
+
+            <div className="skills">
+                <span className="Name">Javascript</span>
+                <div className="percent">
+                    <div className="progresses" style={{width: '21%'}}></div>
+                </div>
+                <span className="Value">21%</span>
+            </div>
+
+            <div className="skills">
+                <span className="Name">React</span>
+                <div className="percent">
+                    <div className="progresses" style={{width: '17%'}}></div>
+                </div>
+                <span className="Value">17%</span>
+            </div>
+
+            <div className="skills">
+                <span className="Name">Payton</span>
+                <div className="percent">
+                    <div className="progresses" style={{width: '1%'}}></div>
+                </div>
+                <span className="Value">1%</span>
+            </div>
+
+            <div className="skills">
+                <span className="Name">YouTube</span>
+                <div className="percent">
+                    <div className="progresses" style={{width: '12%'}}></div>
+                </div>
+                <span className="Value">12%</span>
+            </div>
         </div>
     );
 }

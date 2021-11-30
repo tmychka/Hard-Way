@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 
 import Todo from '../../Todo/Todo';
-import { getBoardItems, createItem } from '../../api/items'
+import { getBoardItems, createItem, deleteItem, updateItem } from '../../api/items'
 
 import './Style.css';
 
@@ -33,14 +33,47 @@ const Board = () => {
       })
    }
 
+   const handleDeletItem = (id) => {
+      deleteItem(id).then(() => {
+         setItems(prev => prev.filter(x => x.id !== id))
+      })
+   }
+
+   const handleUpdateItem = (id, done) => {
+      const data = {
+         data: {
+            attributes: {
+               done: !done,
+            }
+         }
+      }
+
+      updateItem(id, data).then(() => {
+         setItems(prev => prev.map(x => {
+            if(x.id == id) {
+               return {
+                  id: x.id,
+                  attributes: {
+                     done: !x.attributes.done,
+                     title: x.attributes.title
+                  }
+               }
+            } 
+            return x
+         }))
+      })
+   }
+   
+
    return (
        <div>
          <div className='Day'>
-            <a className='home' href='/'><i className="fas fa-home"></i></a>
             <div className="Day_conteiner">
                <Todo 
                   items={items}
                   onCreateItem={handleCreateItem}
+                  onDeleteItem={handleDeletItem}
+                  onUpdateItem={handleUpdateItem}
                /> 
             </div>
          </div>

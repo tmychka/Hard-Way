@@ -1,5 +1,6 @@
  .todo-app {
-  padding: 40px;
+  top: 30px;
+  padding: 70px 40px;
   position: absolute;
   background: rgba(5, 5, 5, 0.726);
   backdrop-filter: blur(25px);
