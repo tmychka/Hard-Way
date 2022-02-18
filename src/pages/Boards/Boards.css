@@ -1,101 +1,104 @@
-.boards-app {
-    background: rgb(26, 26, 26);
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Poppins:wght@100;400;700&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.boards-app {
+  background: rgb(255, 255, 255);
+  min-height: 100vh;
+  width: 100%;
 }
 
 .boards-nav {
-    font-weight: bold;
-    width: 53px;
-    height: 53px;
-    bottom: 2px;
-    right: 5px;
-    z-index: 2000;
-    position: fixed;
-    border-radius: 10px;
+  font-weight: bold;
+  width: 53px;
+  height: 53px;
+  bottom: 2px;
+  right: 5px;
+  z-index: 2000;
+  position: fixed;
+  border-radius: 10px;
 }
 
-.boards-box {   
-    display: flex;
-    justify-content:  center;
-    width: 230px;
-    left: 100px;
-    flex-wrap: wrap;
-    position: relative;
-    background: rgb(26, 26, 26);
-    padding-top: 20px;
-    padding-bottom: 50px;
+.boards-box {
+  display: flex;
+  justify-content: center;
+  width: 230px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.flex-board {
+  width: 100%;
+  max-width: 1380px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .board {
-    margin-bottom: 70px;
-    margin: 30px 8px;
-    position: relative;
-    height: 200px;
-    width: 230px;
-    background-color: rgb(10, 10, 10);
-    border-radius: 5px;
-    transition: all .5s ease;
-    cursor: pointer;
+  display: flex;
+  height: 250px;
+  width: 230px;
+  border-radius: 2px;
+  background: linear-gradient(60deg, rgb(0, 0, 0), rgb(51, 51, 51));
+  margin: 30px 5px;
+  transition: all 0.5s ease;
+  text-align: center;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.board:hover {
+  overflow: unset;
 }
 
 .board-title {
-    position: relative;
-    display: block;
-    flex-direction: column;
-    text-align: center;
-    border-radius: 5px;
-    padding: 10px 0;
-    margin: 140px 0;
-    background: rgb(0, 0, 0);
-    color: cornsilk;
-    line-height: .5;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 60%;
 }
 
 .board-title h1 {
-    font-size: 20px; 
+  font-size: 16px;
 }
 
 .board-title span {
-    color: rgb(6, 173, 81);
+  color: rgb(6, 173, 81);
 }
 
 .remove {
-    position: relative;
-    left: 0px;
+  
 }
 
 .modal-content.active {
-    background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
 }
 
 .modal-footer.active {
-    border-top: none;
+  border-top: none;
 }
 
 .modal-title.active {
-    color: rgb(20, 20, 20);
+  color: rgb(20, 20, 20);
 }
 
 .modal.modal-board {
-    height: 0%;
+  height: 0%;
 }
 
 .modal.modals {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background:rgba(0, 0, 0, .75);
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.75);
+  height: 100%;
 }
 
 .create__input {
@@ -115,11 +118,11 @@
   background: rgba(219, 219, 219, 0.678);
   color: rgb(0, 0, 0);
   padding-left: 10px;
-  border-radius: 2px;   
+  border-radius: 2px;
   border: none;
 }
 
 .create__input:focus-visible,
 .create__date:focus-visible {
-    outline: none;
+  outline: none;
 }

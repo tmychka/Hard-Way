@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Poppins:wght@100;400;700&display=swap');
+
+.marathon-app {
+  height: 92.3vh;
+  background: url(https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YnJpY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60); 
+}
+
+.marathon-plus {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.marathon-title {
+  position: relative;
+  left: 50px;
+  font-size: 80px;
+  color: rgb(4, 141, 196);
+}
+
+.marathon-title::before {
+  content: '';
+  width: 20%;
+  margin: 0 155px;
+  top: 100%;
+  background: crimson;
+  position: absolute;
+  height: 3px;
+}
+
+.marathon-plus button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  -webkit-animation:rotate-scale-up .65s linear both;animation:rotate-scale-up .65s linear both
+
+}
+
+@-webkit-keyframes rotate-scale-up{0%{-webkit-transform:scale(1) rotateZ(0);transform:scale(1) rotateZ(0)}50%{-webkit-transform:scale(2) rotateZ(180deg);transform:scale(2) rotateZ(180deg)}100%{-webkit-transform:scale(1) rotateZ(360deg);transform:scale(1) rotateZ(360deg)}}@keyframes rotate-scale-up{0%{-webkit-transform:scale(1) rotateZ(0);transform:scale(1) rotateZ(0)}50%{-webkit-transform:scale(2) rotateZ(180deg);transform:scale(2) rotateZ(180deg)}100%{-webkit-transform:scale(1) rotateZ(360deg);transform:scale(1) rotateZ(360deg)}}
+
+.modal {
+  background: rgba(0, 0, 0, 0.75);
+  display: block !important;
+}
+
+.modal-content {
+  top: 300px;
+}
+
+.modal-body {
+  display: flex;
+}
+
+.input-marathon {
+  display: flex;
+  margin: 10px;
+}
+
+.name-label {
+  font-size: 14px;
+  font-weight: 550;
+  font-family: 'Poppins', sans-serif;
+}
+
+.width-input1 {
+  width: 50%;
+  position: relative;
+  right: 10px
+}
+
+.width-input2 {
+  width: 50%;
+}
+
+.marafon {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: url(https://cdn.pixabay.com/photo/2019/11/12/18/44/white-4621828__340.jpg);
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.titles {
+  width: 30%;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  color: rgb(255, 243, 243);
+  background-color: rgb(10, 10, 10);
+}
+
+.marafon-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.marafon-boxing {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1170px;
+  width: 100%;
+}
+
+.boxing {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 0px 10px 10px rgba(5, 5, 5, 0.582);
+  background-color: rgb(27, 27, 27);
+  transition: .5s;
+}
+
+.boxing:hover {
+  transform: scale(1.1)
+}
+
+.boxing-title h1 {
+  position: relative;
+  margin: 0; 
+  top: 55px;
+  font-size: 1rem;
+}
+
+.name-title {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: .2s;
+}
+
+.name-title:hover {
+  text-decoration: none;
+  color: rgb(185, 189, 186);
+}
+
+.boxing-title span {
+  position: relative;
+  top: 60px; 
+  color: green;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.stat-marafon {
+  width: 38%;
+  background: rgba(0, 0, 0, .2);
+  position: relative;
+  right: 30px;
+  margin: 0 auto;
+}
+
+.newcontent {
+  max-width: 1380px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.newcontainer {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: rgba(0, 0, 0, 0.336);
+  color: white;
+  margin: 10px;
+}
+
+.newbutton {
+  position: absolute;
+  margin: 150px 0 0 0;
+  right: 5px;
+}
+
+.newbutton button {
+  margin: 0 2px;
+}
+
+.shar {
+  text-decoration: none;
+  color: white;
+}
+
+.shar:hover {
+  text-decoration: none;
+}
+
+/*
+.newcontainer:nth-child(1) {
+  background-position: right;
+  background-repeat: no-repeat;
+  background-image: url();
+}
+
+.newcontainer:nth-child(2) {
+  background-image: url();
+}
+
+.newcontainer:nth-child(3) {
+  background-position: right;
+  background-repeat: no-repeat;
+  background-image: url();
+}
+*/
+
+.newtitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.newtitle h1 {
+  font-size: 1rem;
+  border-left: 2px solid rgb(180, 1, 1);
+  cursor: pointer;
+}
+
+.newdate {
+  position: absolute;
+  top: 85%;
+  left: 10px;
+}
+
+.cirlce {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+}
+
+.values {
+  margin-top: 32px;
+  font-size: 25px;
+}
+
+.stati1 div {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.stati1 h5, .stati2 h5 {
+  font-size: 15px;
+}
+
+.stati2 div {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50px;
+  position: relative;
+  right: 70px;
+  cursor: pointer;
+}
+
+.date-fns {
+  font-size: 14px;
+  padding: 2px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+.datemonth {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.tasks {
+  height: 100vh;
+}
+
+.container-tasks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1170px;
+  width: 100%;
+}
+
+
+.title-tasks {
+  justify-content: center;
+}
+
+.title-tasks span {
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+/*Proga  https://media.istockphoto.com/photos/digital-technology-software-development-iot-internet-of-things-picture-id1341175431?k=20&m=1341175431&s=612x612&w=0&h=JQL0xMGFbd5oEtj_NXFWBfkI6B9YnmyfWd-x1gC27gU= */
+/* English https://media.istockphoto.com/photos/graduation-cap-sitting-over-a-speech-bubble-textured-with-british-on-picture-id1248055511?k=20&m=1248055511&s=612x612&w=0&h=SgGWTEkbGWY8iuK0sDU034B4hfA0WIT-oScYytkgBt0= */
+/* Sport https://media.istockphoto.com/photos/rendering-fitness-equipment-on-color-background-picture-id1178477986?k=20&m=1178477986&s=612x612&w=0&h=n59ZVw56J6LYp7Dr8LgiFzo6vXXwP7wGJSq7-baPwAs= */

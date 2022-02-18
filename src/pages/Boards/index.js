@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { format, set } from 'date-fns';
+import { format } from 'date-fns'
 import { Link } from 'react-router-dom';
 
 import {getBoards, removeBoard} from '../../api/boards';
@@ -8,10 +8,9 @@ import './Boards.css';
 import Loading from '../../components/Loading/Loading';
 
 const Boards = () => {
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
     const [boards, setBoards] = useState([]);
-    const [open, setOpen] = useState(false)
-
+    const [open, setOpen] = useState(false);
 
     const fetchBoards = useCallback(() => {
         setLoading(true)
@@ -52,19 +51,23 @@ const Boards = () => {
                     + 
                 </button>
             </nav>
-            <div className="d-flex flex-wrap">
+            <div className="d-flex flex-wrap flex-board">
                 {boards.map(board => (
                     <div key={board.id} className='boards-box'>
                         <div className='board'>
                             <button 
-                                className='btn btn-outline-danger remove'
+                                className='btn btn-outline-success remove'
                                 onClick={() => handleRemove(board.id)}
                             >
                                 <i className="fas fa-trash" />
                             </button>
                             <div className='board-title'>
-                               <h1><Link to={`/boards/${board.id}`}>{board.attributes.title}</Link></h1>
-                               <span>{format(new Date(board.attributes.date), 'MM.dd.yyyy')}</span>
+                               <h1>
+                                   <Link to={`/boards/${board.id}`}>{board.attributes.title}</Link>
+                                </h1>
+                               <span>
+                                   {format(new Date(board.attributes.date), 'MM.dd.yyyy')}
+                                </span>
                             </div>
                         </div>
                     </div>

@@ -2,55 +2,38 @@ import React from 'react';
 import './About.css';
 
 const About = () => {
+
+
+    const v1 = '67'
+    const v2 = '80'
+    const v3 = '21'
+
+
     return (
         <div className="container">
-            <h2>Css Skills Bar UI Design</h2>
+            <h2>Marathon Progress   2022 - 2023</h2>
             <div className="skills">
-                <span className="Name">Html</span>
+                <span className="Name">Programiring</span>
                 <div className="percent">
-                    <div className="progresses" style={{width: '67%'}}></div>
+                    <div className="progresses" style={{width: `${v1}%`}}></div>
                 </div>
-                <span className="Value">67%</span>
+                <span className="Value">{v1}%</span>
             </div>
 
             <div className="skills">
-                <span className="Name">Css</span>
+                <span className="Name">English</span>
                 <div className="percent">
-                    <div className="progresses" style={{width: '80%'}}></div>
+                    <div className="progresses" style={{width: `${v2}%`}}></div>
                 </div>
-                <span className="Value">80%</span>
+                <span className="Value">{v2}%</span>
             </div>
 
             <div className="skills">
-                <span className="Name">Javascript</span>
+                <span className="Name">Sport</span>
                 <div className="percent">
-                    <div className="progresses" style={{width: '21%'}}></div>
+                    <div className="progresses" style={{width: `${v3}%`}}></div>
                 </div>
-                <span className="Value">21%</span>
-            </div>
-
-            <div className="skills">
-                <span className="Name">React</span>
-                <div className="percent">
-                    <div className="progresses" style={{width: '17%'}}></div>
-                </div>
-                <span className="Value">17%</span>
-            </div>
-
-            <div className="skills">
-                <span className="Name">Payton</span>
-                <div className="percent">
-                    <div className="progresses" style={{width: '1%'}}></div>
-                </div>
-                <span className="Value">1%</span>
-            </div>
-
-            <div className="skills">
-                <span className="Name">YouTube</span>
-                <div className="percent">
-                    <div className="progresses" style={{width: '12%'}}></div>
-                </div>
-                <span className="Value">12%</span>
+                <span className="Value">{v3}%</span>
             </div>
         </div>
     );

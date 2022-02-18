@@ -66,19 +66,16 @@ const Board = () => {
    
 
    return (
-       <div>
-         <div className='Day'>
-            <div className="Day_conteiner">
-               <Todo 
-                  items={items}
-                  onCreateItem={handleCreateItem}
-                  onDeleteItem={handleDeletItem}
-                  onUpdateItem={handleUpdateItem}
-               /> 
-            </div>
+      <div className='Day'>
+         <div className="Day_conteiner">
+            <Todo 
+               items={items}
+               onCreateItem={handleCreateItem}
+               onDeleteItem={handleDeletItem}
+               onUpdateItem={handleUpdateItem}
+            /> 
          </div>
-       </div>
-
+      </div>
    )
 }
 

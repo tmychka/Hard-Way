@@ -88,13 +88,12 @@ nav .conteiner .list {
 }
 
 .boards {
-  position: relative;
-  right: 3px
+  margin: 0 5px;
 }
-
 
 .abouts {
-    height: 270vh;
-    background: #d63007;
-    margin: 0 auto;
+  height: 100vh;
+  background: #181818;
+  margin: 0 auto;
 }
+
