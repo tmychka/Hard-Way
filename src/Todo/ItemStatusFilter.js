@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './ItemStatusFilter.css'
+import './ItemStatusFilter.css';
 
 const filterButtons = [
   { name: 'all', label: 'All' },
   { name: 'active', label: 'Active' },
-  { name: 'done', label: 'Done' }
+  { name: 'done', label: 'Done' },
 ];
 
 const style = {
@@ -16,11 +16,10 @@ const style = {
   left: '190px',
   boxShadow: 'none',
   color:  'tomato',
-}
+};
 
-const ItemStatusFilter = ({filter, onFilterChange = () => {}}) => {
-
-  const buttons = filterButtons.map(({name, label}) => {
+const ItemStatusFilter = ({ filter, onFilterChange = () => {} }) => {
+  const buttons = filterButtons.map(({ name, label }) => {
     const isActive = name === filter;
     const classNames = 'btn ' + (isActive ? 'btn' : 'btn');
 
@@ -29,13 +28,13 @@ const ItemStatusFilter = ({filter, onFilterChange = () => {}}) => {
               type="button"
               onClick={() => onFilterChange(name)}
               className={classNames}
-              style={style  }>{label}</button>
+              style={style}>{label}</button>
     );
   });
 
   return (
     <div className="btn-group">
-      { buttons }
+      {buttons}
     </div>
   );
 };

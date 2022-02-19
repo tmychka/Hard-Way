@@ -16,7 +16,7 @@ const Month = {
     September: 8,
     October: 9,
     Novermber: 10,
-    December: 11
+    December: 11,
 };
 
 export function areEqual(a, b) {
@@ -37,7 +37,7 @@ export function getDaysInMonth(date) {
     const month = date.getMonth();
     const year = date.getFullYear();
     const daysInMonth = DAYS_IN_MONTH[month];
-    
+
     if (isLeapYear(year) && month === Month.February) {
         return daysInMonth + 1;
     } else {
@@ -60,7 +60,7 @@ export function getMonthData(year, month) {
 
     for (let i = 0; i < (daysInMonth + monthStartsOn) / DAYS_IN_WEEK; i++) {
         result[i] = [];
-        
+
         for (let j = 0; j < DAYS_IN_WEEK; j++) {
             if ((i === 0 && j < monthStartsOn) || day > daysInMonth) {
                 result[i][j] = undefined;

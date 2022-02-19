@@ -1,4 +1,4 @@
-import {HTTP} from './index';
+import { HTTP } from './index';
 
 export const getMarathon = () => HTTP.get('marathons');
 export const removeMarathons = (id) => HTTP.delete(`marathons/${id}`);

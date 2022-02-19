@@ -1,22 +1,22 @@
 import React from 'react';
 import TodoListItem from './TodoListItem';
 
-import './TodoList.css'
+import './TodoList.css';
 
 const TodoList = ({ items, onToggleDone, onDelete }) => {
 
 const elements = items.map((item) => {
-const { id, ...itemProps } = item;    
+const { id, ...itemProps } = item;
 
     return (
            <li key={id} className='list-group-item' >
                <TodoListItem
                       { ...itemProps }
                       onToggleDone={ () => onToggleDone(id, itemProps.attributes.done) }
-                      onDelete={ () => onDelete(id) }       
+                      onDelete={ () => onDelete(id) }
                />
            </li>
-       )
+       );
     });
 
 
@@ -27,4 +27,4 @@ const { id, ...itemProps } = item;
     );
 };
 
-export default TodoList
+export default TodoList;

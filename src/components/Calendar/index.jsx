@@ -10,14 +10,14 @@ export default class Calendar extends React.Component {
         date: new Date(),
         years: [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
         monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-        weekDayNames: ['Пн', 'Вт', 'Ср', 'Чт' , 'Пт', 'Сб', 'Вс'],
-        onChange: Function.prototype
+        weekDayNames: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+        onChange: Function.prototype,
     };
 
     state = {
         date: this.props.date,
         currentDate: new Date(),
-        selectedDate: null
+        selectedDate: null,
     };
 
     get year() {
@@ -34,13 +34,13 @@ export default class Calendar extends React.Component {
 
     handlePrevMonthButtonClick = () => {
         const date = new Date(this.year, this.month - 1);
-        
+
         this.setState({ date });
     };
 
     handleNextMonthButtonClick = () => {
         const date = new Date(this.year, this.month + 1);
-        
+
         this.setState({ date });
     };
 
@@ -55,7 +55,7 @@ export default class Calendar extends React.Component {
 
     handleDayClick = date => {
         this.setState({ selectedDate: date });
-        
+
         this.props.onChange(date);
     };
 
@@ -76,7 +76,7 @@ export default class Calendar extends React.Component {
                         onChange={this.handleSelectChange}
                     >
                         {monthNames.map((name, index) =>
-                            <option key={name} value={index}>{name}</option>
+                            <option key={name} value={index}>{name}</option>,
                         )}
                     </select>
 
@@ -86,7 +86,7 @@ export default class Calendar extends React.Component {
                         onChange={this.handleSelectChange}
                     >
                         {years.map(year =>
-                            <option key={year} value={year}>{year}</option> 
+                            <option key={year} value={year}>{year}</option>,
                         )}
                     </select>
 
@@ -97,7 +97,7 @@ export default class Calendar extends React.Component {
                     <thead>
                         <tr>
                             {weekDayNames.map(name =>
-                                <th key={name}>{name}</th>    
+                                <th key={name}>{name}</th>,
                             )}
                         </tr>
                     </thead>
@@ -110,14 +110,14 @@ export default class Calendar extends React.Component {
                                         key={index}
                                         className={classnames('day', {
                                             'today': calendar.areEqual(date, currentDate),
-                                            'selected': calendar.areEqual(date, selectedDate)
+                                            'selected': calendar.areEqual(date, selectedDate),
                                         })}
                                         onClick={() => this.handleDayClick(date)}
                                     >{date.getDate()}</td>
                                     :
-                                    <td key={index} />
+                                    <td key={index} />,
                                 )}
-                            </tr> 
+                            </tr>,
                         )}
                     </tbody>
                 </table>

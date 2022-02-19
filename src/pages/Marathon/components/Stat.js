@@ -182,7 +182,7 @@ function Stat() {
                 <td>0%</td>
               </tr>
     </>
-  )
-}
+  );
+};
 
 export default Stat;

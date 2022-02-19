@@ -3,7 +3,7 @@ import { createMarathon } from "../../../api/marathon";
 import '../Marathon.css';
 
 function Modal({ open, close, onCreateMarathon }) {
-  
+
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
   const [datebefore, setDateBefore] = useState("");
@@ -26,10 +26,10 @@ function Modal({ open, close, onCreateMarathon }) {
   };
 
   const closeModal = () => {
-    setTitle("")
-    setImage("")
-    setDateBefore("")
-    setDateAfter("")
+    setTitle("");
+    setImage("");
+    setDateBefore("");
+    setDateAfter("");
     close();
   };
 
@@ -41,7 +41,7 @@ function Modal({ open, close, onCreateMarathon }) {
           title: title,
           cover_url: image,
           date_from: new Date(datebefore).toISOString(),
-          date_to: new Date(dateafter).toISOString()
+          date_to: new Date(dateafter).toISOString(),
         },
       },
     };
@@ -67,17 +67,17 @@ function Modal({ open, close, onCreateMarathon }) {
               Name Marathon
               <input
                 type='text'
-                className='form-control' 
-                value={title} onChange={handleTitleName} 
+                className='form-control'
+                value={title} onChange={handleTitleName}
               />
             </label>
             <label className='name-label'>
               Background
               <input
                 type='text'
-                className='form-control' 
-                value={image} 
-                onChange={handleImageAdd} 
+                className='form-control'
+                value={image}
+                onChange={handleImageAdd}
               />
             </label>
             <div className='input-marathon'>
@@ -85,7 +85,7 @@ function Modal({ open, close, onCreateMarathon }) {
                 from
                 <input
                   type='datetime-local'
-                  className='form-control' 
+                  className='form-control'
                   value={datebefore} onChange={handleDateFrom}
                 />
               </label>
@@ -93,23 +93,23 @@ function Modal({ open, close, onCreateMarathon }) {
                 to
                 <input
                   type='datetime-local'
-                  className='form-control' 
-                  value={dateafter} 
-                  onChange={handleTitleTo} 
+                  className='form-control'
+                  value={dateafter}
+                  onChange={handleTitleTo}
                 />
               </label>
             </div>
           </div>
           <div className="modal-footer">
             <button
-              type="button" 
-              className="btn btn-dark" 
+              type="button"
+              className="btn btn-dark"
               onClick={closeModal}
             > Close
             </button>
-            <button 
-              type="button" 
-              className="btn btn-light" 
+            <button
+              type="button"
+              className="btn btn-light"
               onClick={submitCreateMarathon}
             > Create
             </button>

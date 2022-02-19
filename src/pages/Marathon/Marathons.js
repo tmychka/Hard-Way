@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { getMarathon, removeMarathons } from '../../api/marathon';
 import { Link } from 'react-router-dom';
-import { format } from 'date-fns'
+import { format } from 'date-fns';
 import Modal from './components/Modal';
 
 import './Marathon.css';
@@ -14,38 +14,38 @@ function Marathons() {
   const fetchMarathon = useCallback(() => {
     // setLoading(true)
 
-    getMarathon().then((res) => { 
+    getMarathon().then((res) => {
         // setLoading(false)
         setMarathon(res.data);
     });
     }, []);
-    
+
     useEffect(() => {
       fetchMarathon();
     }, []);
 
     const handleRemove = (id) => {
-      removeMarathons(id).then(() => {   
-          setMarathon((prevBoards) => prevBoards.filter(marathon => marathon.id !== id))
+      removeMarathons(id).then(() => {
+          setMarathon((prevBoards) => prevBoards.filter(marathon => marathon.id !== id));
       });
     };
 
     const openModal = () => {
-      setModal(true)
-    }
-    
-    const closeModal = () => {
-      setModal(false)
-    }
+      setModal(true);
+    };
 
-    const value = '67%'
+    const closeModal = () => {
+      setModal(false);
+    };
+
+    const value = '67%';
 
   return (
     <div className='marathon-app'>
       <div className='marathon-plus'>
         <h1 className='marathon-title'>Marathon</h1>
         <button
-          className='btn btn-outline-danger' 
+          className='btn btn-outline-danger'
           onClick={openModal}
         >
           +
@@ -53,17 +53,17 @@ function Marathons() {
       </div>
       {marathon.map(marathon => (
         <div className='newcontent'key={marathon.id}>
-          <div 
+          <div
             className='newcontainer'
-            style={{backgroundImage: `url(${marathon.cover_url})`,
-                    backgroundRepeat: 'no-repeat', backgroundPosition: 'right'}}
+            style={{ backgroundImage: `url(${marathon.cover_url})`,
+                    backgroundRepeat: 'no-repeat', backgroundPosition: 'right' }}
           >
             <div className='newtitle'>
               <h1>{marathon.title}</h1>
             </div>
             <div className='newdate'>
               <span className='datemonth'>
-                {format(new Date(marathon.date_from), 'd')} / 
+                {format(new Date(marathon.date_from), 'd')} /
                 {format(new Date(marathon.date_to), 'd')}
               </span>
                 &nbsp;&nbsp;
@@ -87,7 +87,7 @@ function Marathons() {
             </div>
             <div className='newbutton'>
               <button
-                className='btn btn-primary' 
+                className='btn btn-primary'
                 onClick={() => handleRemove(marathon.id)}
               >
                 Delete
@@ -96,18 +96,15 @@ function Marathons() {
                 <Link to={`/marathon/${marathon.id}`} className='shar'>Start</Link>
               </button>
             </div>
-          </div>  
-        </div> 
+          </div>
+        </div>
       ))}
       <Modal
-        open={modal} 
-        close={closeModal} 
-        onCreateMarathon={fetchMarathon} />   
+        open={modal}
+        close={closeModal}
+        onCreateMarathon={fetchMarathon} />
     </div>
-  )
-}
+  );
+};
 
 export default Marathons;
-
-
-

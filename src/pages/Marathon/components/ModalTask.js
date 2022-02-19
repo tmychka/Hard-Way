@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createMarathonTask } from '../../../api/marathon'
+import { createMarathonTask } from '../../../api/marathon';
 import '../Marathon.css';
 
 function ModalTask({ close, modal  }) {

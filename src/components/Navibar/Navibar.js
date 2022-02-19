@@ -1,9 +1,8 @@
-import './Navibar.css'
+import './Navibar.css';
 import { Link } from 'react-router-dom';
 
 const Navibar = () => {
-   
-    const logoNavibar = 'https://icons.iconarchive.com/icons/arrioch/office-dock/128/Whack-MS-Access-icon.png'
+    const logoNavibar = 'https://icons.iconarchive.com/icons/arrioch/office-dock/128/Whack-MS-Access-icon.png';
 
     return (
           <div className="App">
@@ -27,7 +26,7 @@ const Navibar = () => {
               </div>
             </nav>
           </div>
-    )
-}
+    );
+};
 
 export default Navibar;

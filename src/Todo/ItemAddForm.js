@@ -3,15 +3,14 @@ import React, { Component } from 'react';
 import './ItemAddForm.css';
 
 export default class ItemAddForm extends Component {
-
   state = {
-    label: ''
+    label: '',
   };
 
   onLabelChange = (e) => {
     this.setState({
-      label: e.target.value
-    })
+      label: e.target.value,
+    });
   };
 
   onSubmit = (e) => {

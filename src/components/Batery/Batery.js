@@ -9,12 +9,12 @@ const Batery = ({ value }) => {
                 <div className="percent"></div>
                 <div className='batteryShape'>
                     <div className='level'>
-                        <div className="percentage" style={{width: value}}>{value}</div>
+                        <div className="percentage" style={{ width: value }}>{value}</div>
                     </div>
                 </div>
             </div>
         </div>
     );
-}
+};
 
 export default Batery;
