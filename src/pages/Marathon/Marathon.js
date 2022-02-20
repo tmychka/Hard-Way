@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { format } from 'date-fns';
 import ModalTask from './components/ModalTask';
 import Stat from './components/Stat';
@@ -47,7 +47,9 @@ function Marathon() {
           <h1>Boards</h1>
           <div>
             {boards.map(board => (
-              <div>{board.name}</div>
+              <div>
+                <Link to={`/boards/${board.id}`}>{board.title}</Link>
+              </div>
             ))}
           </div>
         </div>

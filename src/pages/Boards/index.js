@@ -2,10 +2,10 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { format } from 'date-fns';
 import { Link } from 'react-router-dom';
 
-import { getBoards, deleteBoard } from '../../api/boards';
-import CreateBoardModal from './components/CreateBoardModal';
-import './Boards.css';
 import Loading from '../../components/Loading/Loading';
+import CreateBoardModal from './components/CreateBoardModal';
+import { getBoards, deleteBoard } from '../../api/boards';
+import './Boards.css';
 
 const Boards = () => {
   const [boards, setBoards] = useState([]);
