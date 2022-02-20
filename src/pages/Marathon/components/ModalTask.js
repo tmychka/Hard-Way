@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { createMarathonTask } from '../../../api/marathon';
+import { createBoard } from '../../../api/boards';
 import '../Marathon.css';
 
-function ModalTask({ close, modal  }) {
+function ModalTask({ close, marathonId, modal  }) {
 
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
@@ -24,15 +24,14 @@ function ModalTask({ close, modal  }) {
   const submitCreateBoard = () => {
     if (!title || !date) return;
     const data = {
-      data: {
-        attributes: {
-          title: title,
-          date: new Date(date).toISOString(),
-        },
+      board: {
+        title: title,
+        date: new Date(date).toISOString(),
+        marathon_id: marathonId,
       },
     };
 
-    createMarathonTask(data).then(() => {
+    createBoard(data).then(() => {
       // onBoardCreated();
       close();
     });

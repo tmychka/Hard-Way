@@ -2,7 +2,7 @@ import React from 'react';
 
 import './TodoListItem.css';
 
-const TodoListItem = ({ attributes: { title, done }, onToggleDone, onDelete }) => {
+const TodoListItem = ({ title, done, onToggleDone, onDelete }) => {
 
     let classNames = 'todo-list-item';
 

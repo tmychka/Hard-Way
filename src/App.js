@@ -22,9 +22,9 @@ function App() {
           <Route exact path="/" element={<Dashboard />} />
           <Route exact path="/info" element={<Info />} />
           <Route exact path="/about" element={<About />} />
-          <Route exact path="/boards/:id" element={<Board />} />
+          <Route exact path="/boards/:boardId" element={<Board />} />
           <Route exact path="/boards" element={<Boards />} />
-          <Route exact path="/marathon/:id" element={<Marathon />} />
+          <Route exact path="/marathon/:marathonId" element={<Marathon />} />
           <Route exact path="/marathon" element={<Marathons />} />
         </Routes>
       </main>

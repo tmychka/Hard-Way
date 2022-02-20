@@ -15,8 +15,9 @@ export default class Todo extends Component {
     };
 
     get progress() {
-       const itemsDone = this.props.items.filter((item) => item.attributes.done === true);
-       return Math.round((itemsDone.length * 100) / this.props.items.length) + '%';
+      if (!this.props.items.length) return '0%'
+      const itemsDone = this.props.items.filter((item) => item.done === true);
+      return Math.round((itemsDone.length * 100) / this.props.items.length) + '%';
     }
 
     onItemAdded = (label) => {
@@ -56,9 +57,9 @@ export default class Todo extends Component {
       if (filter === 'all') {
         return items;
       } else if (filter === 'active') {
-        return items.filter((item) => (!item.attributes.done));
+        return items.filter((item) => (!item.done));
       } else if (filter === 'done') {
-        return items.filter((item) => item.attributes.done);
+        return items.filter((item) => item.done);
       }
     }
 

@@ -1,44 +1,44 @@
 import { useState, useEffect, useCallback } from 'react';
-import { getMarathon, removeMarathons } from '../../api/marathon';
 import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
+
 import Modal from './components/Modal';
+import { getMarathons, removeMarathon } from '../../api/marathon';
 
 import './Marathon.css';
 
 function Marathons() {
-
   const [modal, setModal] = useState(false);
   const [marathon, setMarathon] = useState([]);
 
   const fetchMarathon = useCallback(() => {
     // setLoading(true)
 
-    getMarathon().then((res) => {
-        // setLoading(false)
-        setMarathon(res.data);
+    getMarathons().then(({ data }) => {
+      // setLoading(false)
+      setMarathon(data);
     });
-    }, []);
+  }, []);
 
-    useEffect(() => {
-      fetchMarathon();
-    }, []);
+  useEffect(() => {
+    fetchMarathon();
+  }, []);
 
-    const handleRemove = (id) => {
-      removeMarathons(id).then(() => {
-          setMarathon((prevBoards) => prevBoards.filter(marathon => marathon.id !== id));
-      });
-    };
+  const handleRemove = (id) => {
+    removeMarathon(id).then(() => {
+      setMarathon((prevBoards) => prevBoards.filter(marathon => marathon.id !== id));
+    });
+  };
 
-    const openModal = () => {
-      setModal(true);
-    };
+  const openModal = () => {
+    setModal(true);
+  };
 
-    const closeModal = () => {
-      setModal(false);
-    };
+  const closeModal = () => {
+    setModal(false);
+  };
 
-    const value = '67%';
+  const value = '67%';
 
   return (
     <div className='marathon-app'>

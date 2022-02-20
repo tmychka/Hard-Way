@@ -3,11 +3,10 @@ import { createMarathon } from "../../../api/marathon";
 import '../Marathon.css';
 
 function Modal({ open, close, onCreateMarathon }) {
-
-  const [title, setTitle] = useState("");
-  const [image, setImage] = useState("");
-  const [datebefore, setDateBefore] = useState("");
-  const [dateafter, setDateAfter] = useState("");
+  const [title, setTitle] = useState('');
+  const [image, setImage] = useState('');
+  const [datebefore, setDateBefore] = useState('');
+  const [dateafter, setDateAfter] = useState('');
 
   const handleTitleName = (e) => {
     setTitle(e.target.value);
@@ -26,23 +25,21 @@ function Modal({ open, close, onCreateMarathon }) {
   };
 
   const closeModal = () => {
-    setTitle("");
-    setImage("");
-    setDateBefore("");
-    setDateAfter("");
+    setTitle('');
+    setImage('');
+    setDateBefore('');
+    setDateAfter('');
     close();
   };
 
   const submitCreateMarathon = () => {
     if (!title || !image || !datebefore || !dateafter) return;
     const data = {
-      data: {
-        attributes: {
-          title: title,
-          cover_url: image,
-          date_from: new Date(datebefore).toISOString(),
-          date_to: new Date(dateafter).toISOString(),
-        },
+      marathon: {
+        title: title,
+        cover_url: image,
+        date_from: new Date(datebefore).toISOString(),
+        date_to: new Date(dateafter).toISOString(),
       },
     };
 

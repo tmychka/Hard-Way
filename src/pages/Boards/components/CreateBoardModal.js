@@ -4,8 +4,8 @@ import { createBoard } from "../../../api/boards";
 import "../Boards.css";
 
 const CreateBoardModal = ({ open, onClose, onBoardCreated }) => {
-  const [title, setTitle] = useState("");
-  const [date, setDate] = useState("");
+  const [title, setTitle] = useState('');
+  const [date, setDate] = useState('');
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
@@ -16,19 +16,18 @@ const CreateBoardModal = ({ open, onClose, onBoardCreated }) => {
   };
 
   const handleClose = () => {
-    setTitle("");
-    setDate("");
+    setTitle('');
+    setDate('');
     onClose();
   };
 
   const submitCreateBoard = () => {
     if (!title || !date) return;
+
     const data = {
-      data: {
-        attributes: {
-          title: title,
-          date: new Date(date).toISOString(),
-        },
+      board: {
+        title: title,
+        date: new Date(date).toISOString(),
       },
     };
 

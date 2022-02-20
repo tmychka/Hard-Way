@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { format } from 'date-fns';
 import { Link } from 'react-router-dom';
 
-import { getBoards, removeBoard } from '../../api/boards';
+import { getBoards, deleteBoard } from '../../api/boards';
 import CreateBoardModal from './components/CreateBoardModal';
 import './Boards.css';
 import Loading from '../../components/Loading/Loading';
@@ -26,7 +26,7 @@ const Boards = () => {
   }, []);
 
   const handleRemove = (id) => {
-    removeBoard(id).then(() => {
+    deleteBoard(id).then(() => {
       setBoards((prevBoards) => prevBoards.filter(board => board.id !== id));
     });
   };

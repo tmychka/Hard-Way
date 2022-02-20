@@ -1,24 +1,27 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { format } from 'date-fns';
-import { getMarathonById } from '../../api/marathon';
 import ModalTask from './components/ModalTask';
 import Stat from './components/Stat';
+import { getMarathonById, getMarathonBoards } from '../../api/marathon';
 
 import './Marathon.css';
 
 function Marathon() {
-  const { id } = useParams();
+  const { marathonId } = useParams();
   const [modal, setModal] = useState(false);
   const [marathon, setMarathon] = useState();
+  const [boards, setBoards] = useState([]);
 
   useEffect(() => {
-     getMarathonById(id).then((res) => {
-       setMarathon(res.data);
+    getMarathonById(marathonId).then(({ data }) => {
+       setMarathon(data);
     });
-  }, []);
 
-  // const [task, setTask] = useState([]);
+    getMarathonBoards(marathonId).then(({ data }) => {
+      setBoards(data);
+   });
+  }, []);
 
   const handleModal = () => {
     setModal(true);
@@ -28,27 +31,12 @@ function Marathon() {
     setModal(false);
   };
 
-  // const fetchTask = useCallback(() => {
-  //   // setLoading(true)
-
-  // //   getTask().then((res) => {
-  // //       console.log(res.data)
-  // //       // setLoading(false)
-  // //       setTask(res.data.data);
-  // //   });
-  // // }, []);
-
-  // useEffect(() => {
-  //   fetchTask();
-  // }, []);
-
-
   return (
     <div className='tasks'>
       <div className='d-flex title-tasks'>
         <h1>
           <button className='btn btn-dark' onClick={handleModal}>
-            Create Task
+            Create Board
           </button>
           <span>{ marathon?.title }</span>
           today new task
@@ -56,7 +44,12 @@ function Marathon() {
       </div>
       <div className='container-tasks'>
         <div className='task'>
-           <h1>Tasks</h1>
+          <h1>Boards</h1>
+          <div>
+            {boards.map(board => (
+              <div>{board.name}</div>
+            ))}
+          </div>
         </div>
         <div className='stat-marafon'>
           <table className="table table-dark">
@@ -87,6 +80,7 @@ function Marathon() {
       </div>
       <ModalTask
         close={handleCloseModal}
+        marathonId={marathonId}
         modal={modal}
       />
     </div>

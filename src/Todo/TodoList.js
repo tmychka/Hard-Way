@@ -12,7 +12,7 @@ const { id, ...itemProps } = item;
            <li key={id} className='list-group-item' >
                <TodoListItem
                       { ...itemProps }
-                      onToggleDone={ () => onToggleDone(id, itemProps.attributes.done) }
+                      onToggleDone={ () => onToggleDone(id, itemProps.done) }
                       onDelete={ () => onDelete(id) }
                />
            </li>

@@ -24,7 +24,7 @@ const Dashboard = () => {
       </div>
       <div className='box'>
         <Link to={redirectPath}>
-          Tasks
+          <span>Tasks</span>
         </Link>
       </div>
     </div>
