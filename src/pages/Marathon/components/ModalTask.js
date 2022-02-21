@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { createBoard } from '../../../api/boards';
 import '../Marathon.css';
 
-function ModalTask({ close, marathonId, modal  }) {
+function ModalTask({ close, marathonId, modal, onBoardCreated }) {
 
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
@@ -32,7 +32,7 @@ function ModalTask({ close, marathonId, modal  }) {
     };
 
     createBoard(data).then(() => {
-      // onBoardCreated();
+      onBoardCreated();
       close();
     });
   };
@@ -62,8 +62,8 @@ function ModalTask({ close, marathonId, modal  }) {
             />
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-dark" onClick={handleClose}>Close</button>
-            <button type="button" class="btn btn-light" onClick={submitCreateBoard}>Create</button>
+            <button type="button" className="btn btn-dark" onClick={handleClose}>Close</button>
+            <button type="button" className="btn btn-light" onClick={submitCreateBoard}>Create</button>
           </div>
         </div>
       </div>

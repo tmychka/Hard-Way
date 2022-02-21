@@ -276,24 +276,17 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-
-
 .tasks {
   height: 100vh;
-}
-
-.container-tasks {
-  display: flex;
-  justify-content: space-between;
 }
 
 .task {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 1170px;
+  max-width: 1610px;
   width: 100%;
+  margin: 0 auto;
 }
 
 
