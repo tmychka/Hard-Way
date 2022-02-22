@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from "react-router-dom";
 import { format } from 'date-fns';
+import { getMarathonById, getMarathonBoards } from '../../api/marathon';
+import { deleteBoard } from '../../api/boards';
 import ModalTask from './components/ModalTask';
 import Stat from './components/Stat';
-import { getMarathonById, getMarathonBoards, deleteBoard } from '../../api/marathon';
 
 import './Marathon.css';
 
@@ -21,7 +22,6 @@ function Marathon() {
   }
 
   useEffect(() => {
-
     getMarathonById(marathonId).then(({ data }) => {
       setMarathon(data);
    });

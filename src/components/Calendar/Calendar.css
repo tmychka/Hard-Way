@@ -1,99 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 
 .calendar header {
-    display: flex;
-    justify-content: flex-end;
-    top: 60px;
-    right: 23px;
-    position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  top: 60px;
+  right: 23px;
+  position: absolute;
 }
 
 .calendar header button,
 .calendar header select {
-    margin: 0 1px;
-    border: none;
-    outline: none;
-    top: 10px;
-    position: relative;
-    width: 65px;
-    font-size: 14px;
-    z-index: 1000;
+  margin: 0 1px;
+  border: none;
+  outline: none;
+  top: 10px;
+  position: relative;
+  width: 65px;
+  font-size: 14px;
+  z-index: 1000;
 }
 
 .calendar header select {
-    color: rgb(255, 255, 255);
-    background: rgb(13, 156, 44);
-    font-weight: 600;
-    border-radius: 2px;
-    letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  background: rgb(13, 156, 44);
+  font-weight: 600;
+  border-radius: 2px;
+  letter-spacing: 1px;
 }
 
 .calendar header button {
-    border: 1px solid rgb(13, 156, 44);
-    background: none;
-    font-size: 20px;
-    border-radius: 5px;
-    color: rgb(255, 255, 255);
+  border: 1px solid rgb(13, 156, 44);
+  background: none;
+  font-size: 20px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
 }
 
 .calendar table {
-    table-layout: fixed;
-    border-collapse: separate;
-    border-spacing: 0;
-    position: absolute;
-    top: 120px;
-    font-size: 15px;
-    right: 5px;
-    width: 300px;
-    height: 300px;
-    font-family: 'Poppins', sans-serif;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    background: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(25px);
-    border-radius: 10px;
-    z-index: 1000;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+  position: absolute;
+  top: 120px;
+  font-size: 15px;
+  right: 5px;
+  width: 300px;
+  height: 300px;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 10px;
+  z-index: 1000;
 }
 
 .calendar th {
-    text-align: center;
-    top: -10px;
-    position: relative;
-    height: 36px;   
-    color: rgb(13, 156, 44);
+  text-align: center;
+  top: -10px;
+  position: relative;
+  height: 36px;   
+  color: rgb(13, 156, 44);
 }
 
 .calendar .day {
-    text-align: center;
-    border-radius: 5px;
-    color: seashell;
-    transition: .1s linear;
-    padding: 10px 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: seashell;
+  transition: .1s linear;
+  padding: 10px 10px;
 }
 
 .calendar .day:hover {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .calendar .day.selected {
-    border: 1px solid rgb(13, 156, 44);
+  border: 1px solid rgb(13, 156, 44);
 }
 
 .calendar .day.today {
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-    color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
 }
 
 .calendar .day.today:hover {
-    background-color: #b4b0b0;
+  background-color: #b4b0b0;
 }
 

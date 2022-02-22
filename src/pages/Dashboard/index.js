@@ -4,7 +4,7 @@ import { getActiveBoards } from '../../api/boards';
 
 import './Dashboard.css';
 
-const Dashboard = () => {
+function Dashboard() {
   const [activeBoardId, setActiveBoardId] = useState();
 
   useEffect(() => {

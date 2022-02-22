@@ -6,7 +6,7 @@ import { getBoardItems, createBoardItem, deleteBoardItem, updateBoardItem } from
 
 import './Style.css';
 
-const Board = () => {
+function Board() {
   const { boardId } = useParams();
 
   const [items, setItems] = useState([]);

@@ -1,7 +1,8 @@
 import React from 'react';
 import './About.css';
 
-const About = () => {
+function About() {
+  
   const v1 = '67';
   const v2 = '80';
   const v3 = '21';

@@ -7,7 +7,7 @@ import CreateBoardModal from './components/CreateBoardModal';
 import { getBoards, deleteBoard } from '../../api/boards';
 import './Boards.css';
 
-const Boards = () => {
+function Boards() {
   const [boards, setBoards] = useState([]);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);

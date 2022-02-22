@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { createBoard } from "../../../api/boards";
 import "../Boards.css";
 
-const CreateBoardModal = ({ open, onClose, onBoardCreated }) => {
+function CreateBoardModal({ open, onClose, onBoardCreated }) {
   const [title, setTitle] = useState('');
   const [date, setDate] = useState('');
 

@@ -4,7 +4,7 @@ import TodoList from './TodoList';
 import AppHeader from './AppHeader';
 import ItemStatusFilter from './ItemStatusFilter';
 import ItemAddForm from './ItemAddForm';
-import  Batery from '../components/Batery/Batery';
+import Battery from '../components/Battery/Battery';
 import Calendar from '../components/Calendar';
 import './Todo.css';
 
@@ -38,11 +38,11 @@ export default class Todo extends Component {
     };
 
     onToggleDone = (id, done) => {
-       this.props.onUpdateItem(id, done);
+      this.props.onUpdateItem(id, done);
     };
 
     onDelete = (id) => {
-        this.props.onDeleteItem(id);
+      this.props.onDeleteItem(id);
     };
 
     onFilterChange = (filter) => {
@@ -98,7 +98,7 @@ export default class Todo extends Component {
                       onDelete={this.onDelete} />
 
             <div className='d-flex batery'>
-              <Batery value={this.progress} />
+              <Battery value={this.progress} />
               <Calendar />
             </div>
           </div>
@@ -106,3 +106,5 @@ export default class Todo extends Component {
       );
     };
   }
+
+

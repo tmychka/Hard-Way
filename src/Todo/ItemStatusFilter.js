@@ -18,7 +18,7 @@ const style = {
   color:  'tomato',
 };
 
-const ItemStatusFilter = ({ filter, onFilterChange = () => {} }) => {
+function ItemStatusFilter({ filter, onFilterChange = () => {} }) {
   const buttons = filterButtons.map(({ name, label }) => {
     const isActive = name === filter;
     const classNames = 'btn ' + (isActive ? 'btn' : 'btn');
