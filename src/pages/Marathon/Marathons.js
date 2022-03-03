@@ -38,12 +38,12 @@ function Marathons() {
     setModal(false);
   };
 
-  const value = '67%';
+  const value = '0%';
 
   return (
     <div className='marathon-app'>
       <div className='marathon-plus'>
-        <h1 className='marathon-title'>Marathon</h1>
+        <h1 className='marathon-title'>Marathons</h1>
         <button
           className='btn btn-outline-danger'
           onClick={openModal}

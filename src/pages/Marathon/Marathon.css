@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Poppins:wght@100;400;700&display=swap');
 
 .marathon-app {
-  height: 92.3vh;
+  height: 100%;
   background: url(https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8YnJpY2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60); 
 }
 
@@ -14,7 +14,7 @@
 .marathon-title {
   position: relative;
   left: 50px;
-  font-size: 80px;
+  font-size: 60px;
   color: rgb(4, 141, 196);
 }
 

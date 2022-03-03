@@ -17,24 +17,22 @@ const options = {
   bar: { groupWidth: "100%" }, // Remove space between bars.
   candlestick: {
     fallingColor: { strokeWidth: 0, fill: "red" }, // red
-    risingColor: { strokeWidth: 0, fill: "#0f9d58" } // green
-  }
+    risingColor: { strokeWidth: 0, fill: "#0f9d58" }, // green
+  },
 };
 
-class ExampleChart extends React.Component {
-  render() {
-    return (
-      <div className="App chart">
-        <Chart
-          chartType="CandlestickChart"
-          width="120%"
-          height="390px"
-          data={data}
-          options={options}
-        />
-      </div>
-    );
-  }
+function Chart() {
+  return (
+    <div className="chart">
+      <Chart
+        chartType="CandlestickChart"
+        width="120%"
+        height="390px"
+        data={data}
+        options={options}
+      />
+    </div>
+  );
 }
 
-export default ExampleChart;
+export default Chart;
